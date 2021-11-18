@@ -44,6 +44,7 @@ def my_form_post():
       from train import dataset, model, text, args
       print("logilogi3")
       besult= till.train(dataset,model,args)
+      print("logilogi4")
       result= till.predict(dataset,model,text)
       #train.predict(dataset, model, text, next_words=9)
       print(result)
