@@ -25,11 +25,11 @@ def input(text_in):
 
 def train(dataset, model, args):
     model.train()
-
+    print("logilogi5")
     dataloader = DataLoader(dataset, batch_size=args.batch_size)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
-    
+    print("logilogi6")
     od = open("input.txt", "r")
     text = od.read()
     od.close()
