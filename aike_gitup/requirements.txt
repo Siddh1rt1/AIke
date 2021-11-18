@@ -2,7 +2,7 @@
 torch==1.10.0+cpu
 torchvision==0.11.1+cpu
 torchaudio==0.10.0+cpu
-
+argparse==1.1
 gunicorn==20.1.0
 
 anyio==3.3.4
