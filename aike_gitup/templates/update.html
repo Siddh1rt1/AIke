@@ -1,0 +1,68 @@
+<!doctype html>
+
+<head> <title>AIke</title> 
+    <meta charset=utf-8> 
+    <script   src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="txtstyle.css"> 
+  <script>
+
+
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+const obj = JSON.parse(text);
+
+
+document.getElementById('story').style.height="800px";
+
+  </script>
+</head>
+<body>
+        <h1>Witze generieren mit Eike</h1>
+<title>Jojojjojo</title>
+
+
+        <form method="POST">
+            <input name="text">
+            <input type="submit">
+        </form>
+
+      
+<form>
+        <textarea id="story"   name="story" rows="10" cols="110">{{data}}</textarea>
+      </form>
+       
+
+<h1>Typewriter</h1>
+
+      <button onclick="typeWriter()">Click me</button>
+      
+      <p id="demo"></p>
+      
+      <script>
+
+      var json = require(tim)
+      var i = 0;
+      ;
+      var txt = json+'xpw';
+      var speed = 50;
+      
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      </script>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+</body>
