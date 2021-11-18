@@ -24,13 +24,17 @@ def updatetext(title):
 
 @app.route('/', methods=['POST'])
 def my_form_post():
+    print("logilogi1")
     text = request.form['text']
     hell = open("input.txt","r+")
     hell.truncate(0)
     hell.write(text)
     hell.close()
+    print("logilogi2")
     himmel =open("data/out.csv", "r+")
     top = himmel.read()
+    himmel.close()
+    print("logilogi1")
 
     if (str(text) not in str(top)):
       return render_template('index.html',data="Missing Data - 'Menschen' Eike hat darüber noch keinen Witz geschrieben.")  
@@ -38,6 +42,7 @@ def my_form_post():
       #data = text.upper()
       import train as till
       from train import dataset, model, text, args
+      print("logilogi3")
       besult= till.train(dataset,model,args)
       result= till.predict(dataset,model,text)
       #train.predict(dataset, model, text, next_words=9)
