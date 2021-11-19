@@ -4,7 +4,11 @@ app = Flask(__name__)
 import os
 import jinja2
 import argparse
-
+print("logilogi2,4")
+import train as till
+print("logilogi2,5")
+from train import dataset, model, text, args  
+  
 @app.route('/')
 def index():
   return render_template('index.html')
@@ -26,10 +30,10 @@ def updatetext(title):
 @app.route('/', methods=['POST'])
 def my_form_post():
     print("logilogi1")
-    text = request.form['text']
+    textem = request.form['text']
     hell = open("input.txt","r+")
     hell.truncate(0)
-    hell.write(text)
+    hell.write(textem)
     hell.close()
     print("logilogi2")
     himmel =open("data/out.csv", "r+")
@@ -37,14 +41,13 @@ def my_form_post():
     himmel.close()
     print("logilogi1")
 
-    if (str(text) not in str(top)):
+    if (str(textem) not in str(top)):
       return render_template('index.html',data="Missing Data - 'Menschen' Eike hat darüber noch keinen Witz geschrieben.")  
     else:
       #data = text.upper()
       print("logilogi2,6")
-      import train as till
-      print("logilogi2,5")
-      from train import dataset, model, text, args
+
+
       print("logilogi3")
       besult= till.train(dataset,model,args)
       print("logilogi4")
