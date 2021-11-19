@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, jsonify, json 
 
-app = Flask(__name__)
+eikes_app = Flask(__name__)
 
 import os
 import jinja2
@@ -67,5 +67,7 @@ def my_form_post():
       
       
       return render_template('index.html',data=bdata)
-
+    
+if __name__ == '__main__':
+    eikes_app.run()
 
