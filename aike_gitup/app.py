@@ -69,7 +69,3 @@ def my_form_post():
       return render_template('index.html',data=bdata)
 
 
-
-if __name__ == '__main__':
-  app.run(debug=True)
-
