@@ -52,7 +52,7 @@ def train(dataset, model, args):
             xp = xp + str({ 'epoch': epoch, 'batch': batch, 'loss': loss.item() })+"\n"
             print({ 'epoch': epoch, 'batch': batch, 'loss': loss.item() })
             print('47')
-            import app as baz
+            import run as baz
             baz.updatetext("heyho")
             #print({'epoch': epoch})
             #print(predict(dataset, model, text='Eil: Lindner'))
