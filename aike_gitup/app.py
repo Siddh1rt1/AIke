@@ -41,7 +41,9 @@ def my_form_post():
       return render_template('index.html',data="Missing Data - 'Menschen' Eike hat darüber noch keinen Witz geschrieben.")  
     else:
       #data = text.upper()
+      print("logilogi2,6")
       import train as till
+      print("logilogi2,5")
       from train import dataset, model, text, args
       print("logilogi3")
       besult= till.train(dataset,model,args)
