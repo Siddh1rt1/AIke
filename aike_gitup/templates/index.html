@@ -109,18 +109,21 @@
 
 <div id="content5"> Content5
   <div class="output">
-          
-    <button onclick="typeWriter()">Strukturanalyse</button>
+    <form>
     <textarea id="storyadd"   name="story"  ></textarea>
+    </form>
+
     <script>
-     
      
       function addVal(){
       document.getElementById('storyadd').value = texto
       }
-
-      <p id="demo"></p>
-
+    </script>
+    
+    <button onclick="typeWriter()">Strukturanalyse</button>
+     
+    <p id="demo"></p>
+    <script>
       var lustiger =  Math.floor(Math.random() * 10)+Math.floor(Math.random()*100)+Math.floor(Math.random()*800);
       var texto = "Dieser Witz ist mindestens " + lustiger + " % besser als einer von 'echter' Eike";
 
