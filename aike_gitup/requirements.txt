@@ -1,8 +1,8 @@
 -f https://download.pytorch.org/whl/cpu/torch_stable.html
-torchvision==0.8.2+cpu
-torchaudio==0.10.0+cpu
+torchvision==0.8.+cpu
+torchaudio==0.10.+cpu
 
-torch==1.10.0+cpu
+torch==1.10+cpu
 
 numpy==1.21.4
 Flask==2.0.2
