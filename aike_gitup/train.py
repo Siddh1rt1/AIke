@@ -103,7 +103,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--max-epochs', type=int, default=2)
 parser.add_argument('--batch-size', type=int, default=256)
 parser.add_argument('--sequence-length', type=int, default=1)
-args = parser.parse_args()
+args,unkown = parser.parse_args()
 
 dataset = Dataset(args)
 model = Model(dataset)
