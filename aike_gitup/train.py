@@ -99,15 +99,15 @@ def predict(option,dataset, model, text, next_words=9):
     print('71')
     return ' '.join(words)
 print("vor parser ")
-import argparse
-parser = argparse.ArgumentParser()
+#import argparse
+#parser = argparse.ArgumentParser()
 print("log2")
-parser.add_argument('--max-epochs', type=int, default=2)
-parser.add_argument('--batch-size', type=int, default=256)
-parser.add_argument('--sequence-length', type=int, default=1)
-args, unknown = parser.parse_args()
+#parser.add_argument('--max-epochs', type=int, default=2)
+#parser.add_argument('--batch-size', type=int, default=256)
+#parser.add_argument('--sequence-length', type=int, default=1)
+#args, unknown = parser.parse_args()
 
-dataset = Dataset(args)
+dataset = Dataset(1)
 model = Model(dataset)
 
 #train(dataset, model, args)
