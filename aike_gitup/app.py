@@ -129,5 +129,6 @@ def set_timer(timer):
   return timer
 
 if __name__ == '__main__':
-  app.run(debug=True)
   import argparse
+  app.run(debug=True)
+  
