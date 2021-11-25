@@ -99,7 +99,7 @@ def predict(option,dataset, model, text, next_words=9):
     print('71')
     return ' '.join(words)
 print("vor parser ")
-import argsparse
+import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--max-epochs', type=int, default=2)
 parser.add_argument('--batch-size', type=int, default=256)
