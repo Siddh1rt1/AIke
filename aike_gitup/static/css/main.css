@@ -1,59 +1,111 @@
 .container{
   display:grid;
+  max-width: 1400px;
   height:100vh;
+  background: #D7D7D7;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1,2fr 1.2fr 1,2fr 0.8fr;
+  grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
     "nav nav nav nav"
     "content2 content1 main main"
-    "content3 content3 main main" 
-    "content4 content4 content4 content5"
-    "sidebar sidebar sidebar sidebar";
-    grid-gap: 0.4rem;
+    "content3 content3 mainadd mainadd" 
+    "content3 content3 content5 content5";
+    grid-gap: 0.8rem;
     font-family:"Inter","source Code Pro";
     font-weight:800;
     text-transform: uppercase;
-    font-size:12px;
+    font-size:18px;
     color: #004d40;
     text-align:center;
     font-size: 12px;
 }
 
+canvas {
+  display: block;
+  position:absolute;
+  background: #2e5eaa;
+  top:0;
+  left:0;
+  }
+
 nav{
-  background: #a7ffeb;
+  background: #2e5077;
   grid-area: nav;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  font-size:40px;
+    color: #ffffff;
+}
+#überschrift2{
+
+  font-size:20px;
 }
 
-
 main{
-  background: #84ffff;
+  background: #030102;
   grid-area: main;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  font-size: 20px;
+  color: #ffffff;
 }
+#mainadd{
+  background: #611c35;
+  grid-area: mainadd;
+  border-radius:var(--main-radius);
+  padding-top: var(--main-padding);
+  font-size: 20px;
+  color: #ffffff;
 
+}
 #sidebar{
-  background: #18ffff;
+  background: #25b1b1;
   grid-area:sidebar;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
 }
 
 #content1{
-  background: #6fffd2;
+  background: #d7e8ba;
   grid-area:content1;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  font-size:20px;
+  text-align:left;
 }
+#copytext,#copynumb,#strukturbutton{
+  font-size:20px;
+}
+#copynumber{
+  font-size:20px;
 
+}
+output{
+  font-size:20px;
+}
+#text{
+font-size:20px;
 
+}
+#text2{
+  font-size:20px;
+  
+  }
+#text3{
+    font-size:20px;
+    
+    }
+#button{
+  font-size:20px;
+
+}
 #content2{
-  background: #64ffda;
+  background: #bdcaa5;
   grid-area:content2;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  text-align: left;
+  font-size: 20px;
 }
 
 #content3{
@@ -63,18 +115,16 @@ main{
   padding-top: var(--main-padding);
 }
 
-#content4{
-  background: #6fffd2;
-  grid-area:content4;
-  border-radius:var(--main-radius);
-  padding-top: var(--main-padding);
-}
+
 #content5{
-  background: #6fffd2;
+  background: #ffa630;
   grid-area:content5;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  text-align: left;
+  font-size: 20px;
 }
+
 #content6{
   background: #6fffd2;
   grid-area:content6;
@@ -85,6 +135,12 @@ main{
 #story{
   width: 100%;
   height: 100%;
+  font-size: 20px;
+}
+#storyadd{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
 
 }
 footer{
@@ -95,23 +151,31 @@ footer{
 }
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: 100%;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
   .container{
-    grid-template-columns: 1fr;
-    grid-template-rows:0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
-      "nav"
-      "sidebar"
-      "main"
-      "content1"
-      "content3"
-      "content2"
-      "content4"
-      "content5"
-      "content6"
-      "footer";
+      "content2 main"
+      "content2 content1"
+      "content3 content3"
+      "content5 content5"
+      "nav mainadd";
+  }
+
+
+img {
+  width: 50%;
+  height: 50%;
+  max-width: 100%;
+  }
+
+  #story{
+    width: 100%;
+    height: 500px;
+    font-size: 20px;
   }
 }
-

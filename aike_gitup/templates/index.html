@@ -11,39 +11,52 @@
 <body>
       <title>AIke</title>
 <div class="container">
+ 
 
-  <nav>Witzegenerator: AIke
 
+
+
+
+
+
+
+  <nav><p id=überschrift1>Witze generieren mit AIke</p>
+    <p id=überschrift2>200 Witze, 1000 Trainingseinheiten, 1 App, 0 Personalnebenkosten</p>
   </nav>
       
-  <main>main
-        
-            <img class="gif" src = gifstoff alt="Start your own" id ="computer" />
-          
-            <div class ="gif">
-      
-            <img src = gifstoff alt="Start your own" id ="computer" />
-
-            <script>gifstoff = "static/input.gif"
-              document.getElementById("computer").src = gifstoff
-            </script>
+  <main>
+        <div class ="gif">
             
-        
+          <img class="img" src ="static/input.gif" alt="Start your own" onclick="changeImage()" id ="img" />
+  
+                      <script>
+                      function changeImage() {
+                        var image = document.getElementById('img');
+                        if (image.src.match("generate")) {
+                          image.src = "static/input.gif";
+                        } else {
+                          image.src = "static/generate.gif";
+                        }
+                      }
+                      </script>
         
       
         </div>
+        
   </main>
+<div id="mainadd">
+  <p>Das Pytorchmodul dieser Website ist von auf github geforked und erweitert. Dieses Basis-RNN-Netzwerk wurde anschließend 1000 mal mit von Eike geschriebenen Witzen trainniert. OpenSourcecode hier:</p>
+</div>
+  <div id="content1">
+    <div id=radio2main>
+      <form method="Post">
+    <form id=radio2>
 
-
-
-  <div id="sidebar">Sidebar
-        <text>
-
-        </text>
-
-  </div>
-
-  <div id="content1">Content1
+      
+    </form>
+    
+      </form>
+    </div>
     <form method="POST">
 
       <form name="radio" id = "radio">
@@ -71,21 +84,32 @@
         </div>
 
 
-        <p>max Versuche 1-20</p>
-      <input id="text2" input name="text2" value={{timer_variable}}>
-        <p>max Wörter (1-20)</p>
+        <p>Epoche(1-20)</p>
+      <input id="text2" input name="text2" font-size="20px" value={{timer_variable}}>
+        <p>Words(1-20)</p>
       <input id="text3" input name="text3" value={{words_variable}}>
         <p2 id="text2_p2"></p2>
-        <p>Anfang der Witze</p>
+        <p>Input</p>
         <input id="text" input name="text" value={{input_variable}}>
 
-      <form method="POST">
-          <input type="submit">
+      <form method="POST" font-size:20px >
+          <input type="submit" onclick="getstatus()" value="Generiere Witze"id="button">
 
       </form>
       </form>
     </form>
+    <script>
 
+      function lookattext(x){
+        document.getElementById("text2_p2").value = x;
+        if (x=0){
+         document.getElementById("text2").value=4;
+        }
+       else
+      {document.getElementById("text2").value=x;
+       }
+     }
+     </script>   
 
 
        
@@ -94,50 +118,157 @@
   </div>
 
 <div id="content2">
+  <p>
 
+
+  </p>
+  <div><p>
+        Mode: <br> Stoppt Predict() neuer Wörter <br>
+ </p>  </div>
+
+  <div><p>
+    Epoche: <br>Anzahl der Predict()-Versuche<br>
+</p></div> 
+
+<div><p>
+  Words: <br>Wörter pro Predict()<br>
+</p> </div> 
+
+<div><p>
+  Input: <br>Predict() Wörter nach Input<br>
+</p> </div> 
+
+  Aufbau:
+    <div id="status1">
+      index.html
+
+    </div> 
+    <div id="status2">
+      server.py
+
+    </div>
+    
+    <div id="status3">
+      train.py
+    </div>
+    
+    <div id="status4">
+      dataset.py
+
+    </div>
+    
+    <div id="status5">
+      model.py
+
+    </div>
+
+ 
+  <script>
+
+
+var intervalId =window.setInterval(function(){getstatus()},4000);
+function status(a){
+  var elementa = document.getElementById("status"+a);
+        elementa.style.color ="#FF0000";
+        setTimeout(myFunctiona, 200);
+        function myFunctiona() {elementa.style.color ="";}
+}
+var a="1"
+var b="2"
+var c="3"
+var d="4"
+var e="5"
+
+
+function getstatus(){
+        status(1);
+        setTimeout("status(2)",100);
+        setTimeout("status(3)",200);
+        setTimeout("status(4)",300);
+        setTimeout("status(5)",400);
+        setTimeout("status(3)",500);
+        setTimeout("status(4)",600);
+        setTimeout("status(3)",700);
+        setTimeout("status(2)",800);
+        setTimeout("status(1)",900);
+      
+}
+   
+  </script>
+  
 </div>
 
 
-<div id="content3">Content3
+<div id="content3">
   <textarea id="story"   name="story" >{{data}}</textarea>
+  </div>
+
+
+
+<div id="content5"> 
+
+<div> <p>Kopiere deinen Lieblingswitz in die Zwischenablage und poste ihn on Social Media.</p>
+<button id= "copynumber" onclick="getcopy()"> "Kopiere Witz"</button>
+<input id="copynumb" input name="copynumb" value="1"><br>
+<input id="copytext" input name="copytext" value = "kopierter Witz"><br>
+Tag me @endzeitung
 </div>
 
 
-<div id="content4">Content4
+  <script>
+    function getcopy(){
 
-</div>
+      const str = 'The quick brown fox jumps over the lazy dog.';
+      const words = str.split(' ');
+        console.log(words[3]);
+        
+        var copynum=document.getElementById("copynumb").value;
+        myarrayticker= parseInt(copynum);
+        let textcopy=document.getElementById("story").value;
+        const myArray=textcopy.split("\n");
+ 
+        var textin=myArray[myarrayticker-1];
+        textout=textin.split('] ').pop();
+        document.getElementById("copytext").value=textout;
 
-<div id="content5"> Content5
+        copyText = document.getElementById("copytext");
+        copyText.select();
+        copyText.setSelectionRange(0,99999);
+        navigator.clipboard.writeText(copyText.value);
+        alert("Copied the text: "+ copyText.value);
+    }
+  </script>
+
   <div class="output">
-    <form>
+          
+    <button id="strukturbutton" onclick="typeWriter()" >Strukturanalyse</button>
     <textarea id="storyadd"   name="story"  ></textarea>
-    </form>
 
+  </div>
     <script>
-     
+
       function addVal(){
       document.getElementById('storyadd').value = texto
       }
-    </script>
-    
-    <button onclick="typeWriter()">Strukturanalyse</button>
-     
-    <p id="demo"></p>
-    <script>
-      var lustiger =  Math.floor(Math.random() * 10)+Math.floor(Math.random()*100)+Math.floor(Math.random()*800);
-      var texto = "Dieser Witz ist mindestens " + lustiger + " % besser als einer von 'echter' Eike";
 
+
+      var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/10
       var i = 0;
-      var txt = texto;
-      var speed = 50;
-    
+      var txtadd=document.getElementById("copynumb").value;
+      var txt = "Witz "+ txtadd + " ist mindestens " + lustiger +" % lustig.";
+      var speed = 30;
+      document.getElementById("storyadd").innerHTML="";
+     
       function typeWriter() {
+
       if (i < txt.length) {
         document.getElementById("storyadd").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
+     
        } 
+      
       
     </script>
         <pre id="output"></pre>
@@ -153,7 +284,7 @@
           fr.readAsText(this.files[0]);
           })
         </script>
-  </div>
+  
 </div>
 </div>
            
@@ -162,14 +293,6 @@
     </body>
 
     
-    <script>
-      document.getElementById("text2_p2").value = x;
-      function lookattext(x){
-        if (x=0){
-         document.getElementById("text2").value=4;
-        }
-       else
-      {document.getElementById("text2").value=x;
-       }
-     }
-     </script>   
+
+
+
