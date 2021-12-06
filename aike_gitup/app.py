@@ -8,14 +8,14 @@ import re
 import time
 
 SenCut = True
-global_input = "Merz"
-global_timer = 2
-global_words = 2
+global_input = "Merz ist"
+global_timer = 7
+global_words = 12
 check_1=0
 check_2=0
 check_3=0
 check_4=0
-option="normal"
+option="Oneliner"
 option2="send"
 classic_var=0
 status = "html"

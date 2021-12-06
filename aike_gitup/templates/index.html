@@ -5,7 +5,7 @@
     <title>AIke</title> 
       <meta charset=utf-8> 
     <link rel="stylesheet" href="static/css/main.css"> 
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
@@ -22,6 +22,7 @@
 
   <nav><p id=überschrift1>Witze generieren mit AIke</p>
     <p id=überschrift2>200 Witze, 1000 Trainingseinheiten, 1 App, 0 Personalnebenkosten</p>
+    <div id="socialtext"><a href=”https://twitter.com/endzeitung” target="_blank" style="color:#fcfcfc;">Schreib mir deine Meinung</a> </div>
   </nav>
       
   <main>
@@ -45,7 +46,7 @@
         
   </main>
 <div id="mainadd">
-  <p>Das Pytorchmodul dieser Website ist von auf github geforked und erweitert. Dieses Basis-RNN-Netzwerk wurde anschließend 1000 mal mit von Eike geschriebenen Witzen trainniert. OpenSourcecode hier:</p>
+  <p>Das Machinelearning-Pytorch-Modul wurde <a href=”https://github.com/closeheat/pytorch-lstm-text-generation-tutorial” target="_blank" style="color:#fcfcfc;">hier</a> geforked. Training, Server, Dynamische Bedienung made by Aike. Open Source. Lade dir das Programm <a href=”https://github.com/Siddh1rt1/AIke/tree/version3/aike_gitup” style="color:#fcfcfc;">hier</a> runter und generiere dir eigene Texte. </p>
 </div>
   <div id="content1">
     <div id=radio2main>
@@ -92,8 +93,8 @@
         <p>Input</p>
         <input id="text" input name="text" value={{input_variable}}>
 
-      <form method="POST" font-size:20px >
-          <input type="submit" onclick="getstatus()" value="Generiere Witze"id="button">
+      <form method="POST" font-size:20px >  
+         <input type="submit" onclick="getstatus()" value="Generiere Witze"id="button">
 
       </form>
       </form>
@@ -206,12 +207,13 @@ function getstatus(){
 
 
 <div id="content5"> 
-
-<div> <p>Kopiere deinen Lieblingswitz in die Zwischenablage und poste ihn on Social Media.</p>
-<button id= "copynumber" onclick="getcopy()"> "Kopiere Witz"</button>
-<input id="copynumb" input name="copynumb" value="1"><br>
+ <div>
+  <button id= "copynumber" onclick="getcopy()"> "Kopiere Witz"</button>
+  <input id="copynumb" input name="copynumb" value="1"><br>
+</div>
+<div> <p>Kopiere einen Witz und poste ihn im Internet.</p>
 <input id="copytext" input name="copytext" value = "kopierter Witz"><br>
-Tag me @endzeitung
+Tag me <div id="socialtext"><a href=”https://twitter.com/endzeitung” style="color:#fcfcfc;">@Endzeitung</a> </div> :)
 </div>
 
 
@@ -238,7 +240,7 @@ Tag me @endzeitung
         alert("Copied the text: "+ copyText.value);
     }
   </script>
-
+<br>
   <div class="output">
           
     <button id="strukturbutton" onclick="typeWriter()" >Strukturanalyse</button>
@@ -254,13 +256,14 @@ Tag me @endzeitung
 
       var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/10
       var i = 0;
-      var txtadd=document.getElementById("copynumb").value;
-      var txt = "Witz "+ txtadd + " ist mindestens " + lustiger +" % lustig.";
+     
       var speed = 30;
       document.getElementById("storyadd").innerHTML="";
      
       function typeWriter() {
+        var txtadd=document.getElementById("copynumb").value;
 
+      var txt = "Witz "+ txtadd + " ist mindestens " + lustiger +" % lustig.";
       if (i < txt.length) {
         document.getElementById("storyadd").innerHTML += txt.charAt(i);
         i++;
