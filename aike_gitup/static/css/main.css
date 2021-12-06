@@ -166,6 +166,7 @@ img {
 
 @media only screen and (max-width: 800px) {
   .container{
+    width:60vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
@@ -175,7 +176,6 @@ img {
       "content5 content5"
       "nav mainadd";
   }
-
 
 img {
   width: 50%;
