@@ -8,7 +8,7 @@ import re
 import time
 
 SenCut = True
-global_input = "Das Bürgergeld"
+global_input = "Bürgergeld"
 global_timer = 7
 global_words = 12
 check_1=0
