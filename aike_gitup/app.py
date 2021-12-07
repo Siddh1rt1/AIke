@@ -8,7 +8,7 @@ import re
 import time
 
 SenCut = True
-global_input = "Merz ist"
+global_input = "Das Bürgergeld"
 global_timer = 7
 global_words = 12
 check_1=0
@@ -24,7 +24,7 @@ status = "html"
 def index():
   global check_2
   check_2="checked"
-  return render_template('index.html',val1="Merz", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
+  return render_template('index.html',val1="Das Bürgergeld", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
 
 @app.route('/_stuff', methods= ['GET'])
 def stuff():
@@ -101,7 +101,7 @@ def my_form_post():
       top = himmel.read()
 
     if (str(in_text) not in str(top)):
-      return render_template('index.html', data="Missing Data - 'Menschen' Eike hat über "+in_text+"noch keinen Witz geschrieben.", timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
+      return render_template('index.html', data="Missing Data - Der Koalitionsvertrag" +intext+"Hat zu diesem Wort leider keine Meinung", timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
 
     else:
       timer = request.form['text2']
