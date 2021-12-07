@@ -96,7 +96,7 @@
         <input id="text" input name="text" value={{input_variable}}>
 
       <form method="POST" font-size:20px >  
-         <input type="submit" onclick="getstatus()" value="Generiere Witze"id="button">
+         <input type="submit" onclick="getstatus()" value="Generiere Politik"id="button">
 
       </form>
       </form>
@@ -210,11 +210,11 @@ function getstatus(){
 
 <div id="content5"> 
  <div>
-  <button id= "copynumber" onclick="getcopy()"> "Kopiere Witz"</button>
+  <button id= "copynumber" onclick="getcopy()"> "Kopiere Talking-Point"</button>
   <input id="copynumb" input name="copynumb" value="1"><br>
 </div>
 <div> <p>Kopiere einen Satz und poste ihn im Internet.</p>
-<input id="copytext" input name="copytext" value = "kopierter Witz"><br>
+<input id="copytext" input name="copytext" value = "kopierter Talking-Point"><br>
 Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="color:#0d130d;">@Endzeitung</a> </div> :)
 </div>
 
@@ -256,7 +256,7 @@ Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="co
       }
 
 
-      var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/10
+      var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/100
       var i = 0;
      
       var speed = 30;
@@ -265,7 +265,7 @@ Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="co
       function typeWriter() {
         var txtadd=document.getElementById("copynumb").value;
 
-      var txt = "Witz ["+ txtadd + "] ist mindestens " + lustiger +" % lustig.";
+      var txt = "Talking-Point ["+ txtadd + "] ist mindestens " + lustiger +" % konform mit dem Pariser Klimaabkommen. Hoffentlich.";
       if (i < txt.length) {
         document.getElementById("storyadd").innerHTML += txt.charAt(i);
         i++;
