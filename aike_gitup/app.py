@@ -24,7 +24,7 @@ status = "html"
 def index():
   global check_2
   check_2="checked"
-  return render_template('index.html',val1="Das Bürgergeld", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
+  return render_template('index.html',val1="Bürgergeld", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
 
 @app.route('/_stuff', methods= ['GET'])
 def stuff():
