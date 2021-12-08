@@ -1,23 +1,24 @@
 .container{
   display:grid;
   max-width: 1400px;
-  height:60vh;
-  background: #D7D7D7;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr;
-    grid-template-areas:
-    "nav nav nav nav"
-    "content2 content1 main main"
-    "content3 content3 mainadd mainadd" 
-    "content3 content3 content5 content5";
-    grid-gap: 0.8rem;
-    font-family:"Inter","source Code Pro";
-    font-weight:800;
-    text-transform: uppercase;
-    font-size:18px;
-    color: #004d40;
-    text-align:center;
-    font-size: 12px;
+  margin: 0 auto;
+  /* height:60vh; */
+  background: #000000;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr; */
+  grid-template-areas:
+    "nav nav nav "
+    "content2 content1 main"
+    "content3 content3 mainadd"
+    "content5 content5 content5";
+  grid-gap: 0.8rem;
+  font-family:sans-serif;
+  font-weight:800;
+  text-transform: none;
+  font-size:1rem;
+  color: #004d40;
+  padding: 1rem;
+  text-align:center;
 }
 
 canvas {
@@ -29,16 +30,16 @@ canvas {
   }
 
 nav{
-  background: #2e5077;
+  /* background: #341931; */
   grid-area: nav;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
   font-size:40px;
-    color: #ffffff;
+  color: #ffffff;
 }
 #überschrift2{
 
-  font-size:20px;
+  font-size: 1rem;
 }
 
 main{
@@ -46,17 +47,19 @@ main{
   grid-area: main;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
-  font-size: 20px;
+  font-size: 1rem;
   color: #ffffff;
 }
 #mainadd{
-  background: #611c35;
+  background: #ffffff;
   grid-area: mainadd;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
-  font-size: 20px;
-  color: #ffffff;
-
+  font-size: 1rem;
+  color: #000000;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
 }
 #sidebar{
   background: #25b1b1;
@@ -66,63 +69,73 @@ main{
 }
 
 #content1{
-  background: #d7e8ba;
+  background: #341931;
+  color: #fff;
   grid-area:content1;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
-  font-size:20px;
+  font-size: 1rem;
   text-align:left;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 #copytext,#copynumb,#strukturbutton{
-  font-size:20px;
+  font-size: 1rem;
 }
 #copynumber{
-  font-size:20px;
+  font-size: 1rem;
 
 }
 output{
-  font-size:20px;
+  font-size: 1rem;
 }
 #text{
-font-size:20px;
+font-size: 1rem;
 
 }
 #text2{
-  font-size:20px;
+  font-size: 1rem;
   
   }
 #text3{
-    font-size:20px;
+    font-size: 1rem;
     
     }
 #button{
-  font-size:20px;
+  font-size: 1rem;
 
 }
 #content2{
-  background: #bdcaa5;
+  background: #341931;
   grid-area:content2;
   border-radius:var(--main-radius);
-  padding-top: var(--main-padding);
   text-align: left;
-  font-size: 20px;
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #content3{
-  background: #73ffba;
+  background: #341931;
   grid-area:content3;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 
 #content5{
-  background: #ffa630;
+  background: #341931;
   grid-area:content5;
+  color: #fff;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
   text-align: left;
-  font-size: 20px;
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #content6{
@@ -130,6 +143,8 @@ font-size:20px;
   grid-area:content6;
   border-radius:var(--main-radius);
   padding-top: var(--main-padding);
+    padding-left: 1rem;
+  padding-right: 1rem;
 }
 #socialtext{
 
@@ -140,12 +155,13 @@ font-size:20px;
 #story{
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 1rem;
+  
 }
 #storyadd{
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 1rem;
 
 }
 #copytext{
@@ -159,10 +175,8 @@ footer{
   padding-top: var(--main-padding);
 }
 img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-}
+  width: auto;
+ }
 
 @media only screen and (max-width: 800px) {
   .container{
@@ -186,6 +200,6 @@ img {
   #story{
     width: 100%;
     height: 500px;
-    font-size: 20px;
+    font-size: 1rem;
   }
 }
