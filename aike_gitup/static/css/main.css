@@ -170,11 +170,11 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows:0.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
-      "content2 main"
+      "nav main"
       "content2 content1"
       "content3 content3"
       "content5 content5"
-      "nav mainadd";
+      "mainadd mainadd";
   }
 
 img {
