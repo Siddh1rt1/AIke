@@ -101,7 +101,7 @@ def my_form_post():
       top = himmel.read()
 
     if (str(in_text) not in str(top)):
-      return render_template('index.html', data="Missing Data - Der Koalitionsvertrag" +intext+"Hat zu diesem Wort leider keine Meinung", timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
+      return render_template('index.html', data="Missing Data - Der Koalitionsvertrag" +in_text+"Hat zu diesem Wort leider keine Meinung", timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
 
     else:
       timer = request.form['text2']
