@@ -8,7 +8,7 @@ import re
 import time
 
 SenCut = True
-global_input = "Bürgergeld"
+global_input = "weil ich"
 global_timer = 7
 global_words = 12
 check_1=0
@@ -24,7 +24,7 @@ status = "html"
 def index():
   global check_2
   check_2="checked"
-  return render_template('index.html',val1="Bürgergeld", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
+  return render_template('index.html',val1="weil", val2="10", timer=global_timer, timer_variable=global_timer, input_variable = "weil ich", words_variable = global_words, checked1=check_1, checked2="checked", checked3=check_3, checked4=check_4)
 
 @app.route('/_stuff', methods= ['GET'])
 def stuff():
@@ -53,9 +53,9 @@ def my_form_post():
 
     global status
     status="server"
-    in_text = request.form['text']
+    in_text = "weil ich"
     global global_input
-    global_input=str(in_text)
+    global_input=str("weil ich")
     print("log")
     in_words = request.form['text3']
     global global_words 
@@ -97,11 +97,11 @@ def my_form_post():
 
   
 
-    with open("data/out.csv", "r+") as himmel:
+    with open("data/out.csv", "r+", encoding="utf-8") as himmel:
       top = himmel.read()
 
     if (str(in_text) not in str(top)):
-      return render_template('index.html', data="Missing Data - Der Koalitionsvertrag hat zu diesem Input " +in_text+" leider keine Meinung", timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
+      return render_template('index.html', data="Missing Data - Bitte nutze bei Input weil statt" +in_text+".", timer_variable=global_timer, input_variable = "weil ich", words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
 
     else:
       timer = request.form['text2']
@@ -131,7 +131,7 @@ def my_form_post():
         num=num+1
         out_result=out_result+"["+str(num)+"] "+text_result+" \n"
     status="html"
-    return render_template('index.html',data=out_result, timer_variable=global_timer, input_variable = global_input, words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
+    return render_template('index.html',data=out_result, timer_variable=global_timer, input_variable = "weil ich", words_variable = global_words, checked1=check_1, checked2=check_2, checked3=check_3, checked4=check_4)
 
 def checkboxes():
    print("yes")   

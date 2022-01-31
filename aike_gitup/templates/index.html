@@ -2,7 +2,7 @@
 
 <head> 
   <script src="jquery-3.5.1.min.js"></script>
-    <title>AIke</title> 
+    <title>Volo Eike</title> 
       <meta charset=utf-8> 
     <link rel="stylesheet" href="static/css/main.css"> 
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
@@ -10,7 +10,7 @@
 
 <body>
  
-      <title>AIke</title>
+      <title>Volo Eike</title>
 <div class="container">
  
  
@@ -21,22 +21,22 @@
 
 
 
-  <nav><p id=überschrift1>Was sagt der Koalitionsvertrag dazu?</p>
+  <nav><p id=überschrift1>Mein Name ist Eike und ich will Volo beim Hessischen Rundfunk werden</p>
 
-    <p id=überschrift2>2324 Sätze, 4368 Trainingseinheiten, 1 Koalitionsvertrag, 0 Personalnebenkosten</p>
-    <div id="socialtext"><a href="https://twitter.com/endzeitung/" style="color:#fcfcfc;">Schreib mir deine Meinung</a> </div>
+    <p id=überschrift2>100 Gründe, 180 Trainingseinheiten, 1 Excel, 0 Grammatikfehler(hoffentlich)</p>
+    <div id="socialtext"><a href="https://twitter.com/bambitango/" style="color:#fcfcfc;"></a> </div>
   </nav>
       
   <main>
         <div class ="gif">
-            
-          <img class="img" src ="static/input.gif" alt="Start your own" onclick="changeImage()" id ="img" />
+            <p>Eike als soziales und digitales Wesen</p>
+          <img class="img" src ="static/Müller_bild.jpeg" alt="Start your own" onclick="changeImage()" id ="img" />
   
                       <script>
                       function changeImage() {
                         var image = document.getElementById('img');
                         if (image.src.match("generate")) {
-                          image.src = "static/input.gif";
+                          image.src = "static/Müller_bild.jpeg";
                         } else {
                           image.src = "static/generate.gif";
                         }
@@ -48,7 +48,7 @@
         
   </main>
 <div id="mainadd">
-  <p>Das Machinelearning-Pytorch-Modul wurde <a href="https://github.com/closeheat/pytorch-lstm-text-generation-tutorial" target="_blank" style="color:#fcfcfc;">hier</a> geforked. Training, Server, Dynamische Bedienung made by Aike. Open Source. Lade dir das Programm <a href="https://github.com/Siddh1rt1/AIke/tree/version3/aike_gitup" style="color:#fcfcfc;">hier</a> runter und generiere dir eigene Texte. </p>
+  <p>Das Machinelearning-Pytorch-Modul wurde <a href="https://github.com/closeheat/pytorch-lstm-text-generation-tutorial" target="_blank" style="color:#fcfcfc;">hier</a> geforked. Training, Server, Dynamische Bedienung made by Eike. Open Source. Lade dir das Programm <a href="https://github.com/Siddh1rt1/AIke/tree/version3/aike_gitup" style="color:#fcfcfc;">hier</a> runter und generiere dir eigene Texte. </p>
 </div>
   <div id="content1">
     <div id=radio2main>
@@ -93,10 +93,10 @@
       <input id="text3" input name="text3" value={{words_variable}}>
         <p2 id="text2_p2"></p2>
         <p>Input</p>
-        <input id="text" input name="text" value={{input_variable}}>
+        <input id="text" input name="text" value="weil ich">
 
-      <form method="POST" font-size:20px >  
-         <input type="submit" onclick="getstatus()" value="Generiere Politik"id="button">
+      <form method="POST" font-size:20px>  
+         <input type="submit" font-size:35px onclick="getstatus()" value="Warum will ich Volo beim HR sein?"id="button">
 
       </form>
       </form>
@@ -210,11 +210,11 @@ function getstatus(){
 
 <div id="content5"> 
  <div>
-  <button id= "copynumber" onclick="getcopy()"> "Kopiere Talking-Point"</button>
+  <button id= "copynumber" onclick="getcopy()"> "Kopiere Grund"</button>
   <input id="copynumb" input name="copynumb" value="1"><br>
 </div>
-<div> <p>Kopiere einen Satz und poste ihn im Internet.</p>
-<input id="copytext" input name="copytext" value = "kopierter Talking-Point"><br>
+<div> <p>Kopiere einen Bewerbungsgrund und schicke ihn deinen Kolleg:innen.</p>
+<input id="copytext" input name="copytext" value = "kopierter Bewerbungsgrund"><br>
 Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="color:#0d130d;">@Endzeitung</a> </div> :)
 </div>
 
@@ -256,7 +256,7 @@ Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="co
       }
 
 
-      var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/100
+      var lustiger = Math.round(Math.random() * (200 - 5))*4.3 + 5+(Math.round(Math.random()*(40-252,3)))/100+40
       var i = 0;
      
       var speed = 30;
@@ -265,7 +265,7 @@ Tag me <div id="socialtesfxt"><a href="https://twitter.com/endzeitung" style="co
       function typeWriter() {
         var txtadd=document.getElementById("copynumb").value;
 
-      var txt = "Talking-Point ["+ txtadd + "] ist mindestens " + lustiger +" % konform mit dem Pariser Klimaabkommen. Hoffentlich.";
+      var txt = "Bewerbungsgrund ["+ txtadd + "] ist mindestens " + lustiger +" % wahr. Hoffentlich.";
       if (i < txt.length) {
         document.getElementById("storyadd").innerHTML += txt.charAt(i);
         i++;
